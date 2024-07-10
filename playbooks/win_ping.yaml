@@ -1,6 +1,6 @@
 ---
 - name: Ejemplo de Playbook para Windws
-  hosts: windows
+  hosts: all 
   tasks:
     - name: Verificar conexión con win_ping
       win_ping:
