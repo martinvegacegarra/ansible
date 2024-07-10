@@ -4,4 +4,4 @@
   tasks:
     - name: Hacer ping a un host Windows
       ansible.windows.win_ping:
-a
+
