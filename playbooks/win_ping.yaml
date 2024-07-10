@@ -1,5 +1,6 @@
 ---
 - name: Ejemplo de Playbook para Windws
+  ansible.windows.win_ping:
   hosts: windows 
   tasks:
     - name: Verificar conexión con win_ping
