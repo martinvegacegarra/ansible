@@ -1,6 +1,6 @@
 # Name the file microsoft.ad.ldap.yml
 
-plgin: microsoft.ad.ldap
+plugin: microsoft.ad.ldap
 
 ### Supplied by custom credential type ###
 # server: 
