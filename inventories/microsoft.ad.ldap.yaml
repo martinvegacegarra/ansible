@@ -9,7 +9,7 @@ plugin: microsoft.ad.ldap
 ####################################################################
 
 # Connects to ldap://dc01.domain.com:389
-server: dc01.domain.com
+server: srvdmc01.mvega.local
 port: 389
 
 # The username and password can be retrieved using a template with a lookup.
