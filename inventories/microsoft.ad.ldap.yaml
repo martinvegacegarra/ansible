@@ -1,55 +1,8 @@
-# Set in the file ending with microsoft.ad.ldap.yml or microsoft.ad.ldap.yaml
 plugin: microsoft.ad.ldap
 
-
-####################################################################
-#                        Connection Options                        #
-#                                                                  #
-# These options control how the plugin connects to the LDAP server #
-####################################################################
-
-# Connects to ldap://dc01.domain.com:389
-#server: srvdmc01.mvega.local
-#port: 389
-
-# The username and password can be retrieved using a template with a lookup.
-# Other connection options can also be set this way, the option description
-# tells you whether it can be set to a template.
-#username: '{{ lookup("ansible.builtin.env", "LDAP_USERNAME") }}'
-#password: '{{ lookup("ansible.builtin.env", "LDAP_PASSWORD") }}'
+# Connection Options
 username: administrator@mvega.local
-password: Martin12.  
-##############################################
-#               Search Options               #
-#                                            #
-# These options control the searching rules  #
-##############################################
+password: Martin12.
 
-# Search for computer accounts in the Workshop OU.
-
+# Search Options
 search_base: OU=Domain Controllers,DC=mvega,DC=local
-
-# Filter the computer accounts returned for only ones with the dNSDomainName
-# attribute set.
-#filter: (dNSDomainName=*)
-
-# Filter computer accounts returned for ones starting with PROD and with the
-# LAPS password set.
-#filter: (&(sAMAccountName=PROD*)(ms-Mcs-AdmPwd=*))
-
-# See documentation for more details
-#attributes:
-#  sAMAccountName:
-#    sam_account_name:
-#  objectSid:
-#    computer_sid:
-#  pwdLastSet:
-#    password_last_set: this | microsoft.ad.as_datetime
-#  comment:
-#    host_comment
-#  memberOf:
-    # Gets the value (1) of the first RDN (0) of each memberOf instance (this).
-    # For example 'CN=Domain Admins,CN=Users,DC=domain,DC=test'
-    # will be returned as just 'Domain Admins'
-    #    computer_membership: this | microsoft.ad.parse_dn | map(attribute="0.1")
-    #location:
