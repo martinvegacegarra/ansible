@@ -9,15 +9,16 @@ plugin: microsoft.ad.ldap
 ####################################################################
 
 # Connects to ldap://dc01.domain.com:389
-server: srvdmc01.mvega.local
-port: 389
+#server: srvdmc01.mvega.local
+#port: 389
 
 # The username and password can be retrieved using a template with a lookup.
 # Other connection options can also be set this way, the option description
 # tells you whether it can be set to a template.
-username: '{{ lookup("ansible.builtin.env", "LDAP_USERNAME") }}'
-password: '{{ lookup("ansible.builtin.env", "LDAP_PASSWORD") }}'
-
+#username: '{{ lookup("ansible.builtin.env", "LDAP_USERNAME") }}'
+#password: '{{ lookup("ansible.builtin.env", "LDAP_PASSWORD") }}'
+username: administrator@mvega.local
+password: Martin12.  
 ##############################################
 #               Search Options               #
 #                                            #
