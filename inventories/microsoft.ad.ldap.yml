@@ -1,5 +1,5 @@
 ---
-plugin: microsoft.ad.dap
+plugin: microsoft.ad.ldap
 
 # Proporciona las credenciales necesarias aquí si no se especifican en el custom credential type
 # server: ldap://tu.servidor.ldap
@@ -7,4 +7,4 @@ plugin: microsoft.ad.dap
 # username: usuario
 # password: contraseña
 
-search_base: OU=Domain Controllers,DC=mvega,DC=locall
+search_base: OU=Domain Controllers,DC=mvega,DC=local
