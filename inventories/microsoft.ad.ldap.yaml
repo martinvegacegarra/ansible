@@ -30,11 +30,11 @@ search_base: OU=Domain Controllers,DC=mvega,DC=local
 
 # Filter the computer accounts returned for only ones with the dNSDomainName
 # attribute set.
-filter: (dNSDomainName=*)
+#filter: (dNSDomainName=*)
 
 # Filter computer accounts returned for ones starting with PROD and with the
 # LAPS password set.
-filter: (&(sAMAccountName=PROD*)(ms-Mcs-AdmPwd=*))
+#filter: (&(sAMAccountName=PROD*)(ms-Mcs-AdmPwd=*))
 
 # See documentation for more details
 attributes:
