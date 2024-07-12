@@ -3,4 +3,4 @@ server: srvdmc01.mvega.local
 username: administrator@mvega.local
 password: Martin12.
 port: 389
-search_base: OU=Domain Controllers,DC=mvega,DC=local1
+search_base: OU=Domain Controllers,DC=mvega,DC=local
