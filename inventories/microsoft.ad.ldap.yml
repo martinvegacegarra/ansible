@@ -1,5 +1,5 @@
 plugin: microsoft.ad.ldap
-server: srvdmc0.mvega.local
+server: srvdmc01.mvega.local
 username: administrator@mvega.local
 password: Martin12.
 port: 389
