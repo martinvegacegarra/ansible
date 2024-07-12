@@ -1,8 +1,0 @@
-plugin: microsoft.ad.ldap
-
-# Connection Options
-username: administrator@mvega.local
-password: Martin12.
-
-# Search Options
-search_base: OU=Domain Controllers,DC=mvega,DC=local
