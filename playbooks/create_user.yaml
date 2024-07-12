@@ -1,3 +1,4 @@
+plugin: microsoft.ad.user
 - name: Ensure user bob is present in OU ou=test,dc=domain,dc=local
   micosoft.ad.user:
     identity: bob
