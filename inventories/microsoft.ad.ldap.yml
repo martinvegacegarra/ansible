@@ -3,7 +3,7 @@ search_base: OU=Domain Controllers,DC=mvega,DC=local
 
 # Filter the computer accounts returned for only ones with the dNSDomainName
 # attribute set.
-filter: (dNSDomainName=*)  
+#filter: (dNSDomainName=*)  
 
 # See documentation for more details
 attributes:
