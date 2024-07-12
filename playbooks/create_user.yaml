@@ -1,0 +1,10 @@
+- name: Ensure user bob is present in OU ou=test,dc=domain,dc=local
+  micosoft.ad.user:
+    identity: bob
+    password: B0bP4ssw0rd
+    state: present
+    path: OU=Holding,DC=mvega,DC=local 
+    groups:
+      set:
+        - Domain Admins
+        - Domain Usersr
