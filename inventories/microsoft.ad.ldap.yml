@@ -1,2 +1,23 @@
 plugin: microsoft.ad.ldap
 search_base: OU=Domain Controllers,DC=mvega,DC=local
+
+# Filter the computer accounts returned for only ones with the dNSDomainName
+# attribute set.
+filter: (dNSDomainName=*)  
+
+# See documentation for more details
+attributes:
+  sAMAccountName:
+    sam_account_name:
+  objectSid:
+    computer_sid:
+  pwdLastSet:
+    password_last_set: this | microsoft.ad.as_datetime
+  comment:
+    host_comment
+  memberOf:
+    # Gets the value (1) of the first RDN (0) of each memberOf instance (this).
+    # For example 'CN=Domain Admins,CN=Users,DC=domain,DC=test'
+    # will be returned as just 'Domain Admins'
+    computer_membership: this | microsoft.ad.parse_dn | map(attribute="0.1")
+  location:  
