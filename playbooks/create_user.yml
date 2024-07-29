@@ -1,10 +1,10 @@
-- name: Ensure user bob is present in OU ou=test,dc=domain,dc=local
+- name: Esure user bob is created and use custom credentials to create the user
   microsoft.ad.user:
     identity: bob
+    firstname: Bob
+    surname: Smith
     password: B0bP4ssw0rd
     state: present
-    path: OU=Holding,DC=mvega,DC=local
-    groups:
-      set:
-        - Domain Admins
-        - Domain Users
+    domain_username: mvega.local\administrator
+    domain_password: Martin12.
+    domain_server: srvdmc01.mvega.local
